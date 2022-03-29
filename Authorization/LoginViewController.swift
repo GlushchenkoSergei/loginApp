@@ -26,33 +26,28 @@ class LoginViewController: UIViewController {
         settingGradientColor()
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
         welcomeVC.userName = userName.text
     }
     
-    // MARK: - тут вопрос (не работает скрытие клавиатуры)
+    // MARK: - тут вопрос: (не работает скрытие клавиатуры)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
     }
 
-    
-    
     @IBAction func forgotUserName() {
         showAlert(with: "Oops!", and: "Your name is \(correctUserName) 😉")
     }
     
     @IBAction func forgotPassword() {
         showAlert(with: "Oops!", and: "Your password \(correctPassword)")
-     
     }
     
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userName.text = ""
         password.text = ""
-
     }
     
     @IBAction func pressedButtonlogIn() {

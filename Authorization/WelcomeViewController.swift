@@ -10,14 +10,21 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     @IBOutlet var welcomeName: UILabel!
-    
     var userName: String!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // - MARK: Settings gradient color
+        settingGradientColor()
+        
+        welcomeName.text = "Welcome \(userName ?? "")!"
+    }
+}
+
+
+extension WelcomeViewController {
+    
+    private func settingGradientColor() {
         let color1 = UIColor(red: 251 / 255,
                              green: 214 / 255,
                              blue: 101 / 255,
@@ -38,11 +45,5 @@ class WelcomeViewController: UIViewController {
         gradientLayer.colors = [color1, color2, color3]
 
         self.view.layer.insertSublayer(gradientLayer, at: 0)
-        
-        welcomeName.text = "Welcome \(userName ?? "")!"
     }
-    
-
-
-
 }
