@@ -12,16 +12,12 @@ class LoginViewController: UIViewController {
     @IBOutlet var userName: UITextField!
     @IBOutlet var password: UITextField!
     
-    @IBOutlet var buttonlogIn: UIButton!
     
-    private let correctUserName = "Eugenya"
+    private let correctUserName = "1"
     private let correctPassword = "1234"
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
-        userName.layer.cornerRadius = userName.frame.height/2
-        password.layer.cornerRadius = password.frame.height/2
         
         settingGradientColor()
     }
@@ -33,7 +29,8 @@ class LoginViewController: UIViewController {
     
     // MARK: - тут вопрос: (не работает скрытие клавиатуры)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
 
     @IBAction func forgotUserName() {
@@ -58,6 +55,7 @@ class LoginViewController: UIViewController {
         }
         performSegue(withIdentifier: "segueWelcomeVC", sender: nil)
     }
+    
 }
 
 extension LoginViewController {
