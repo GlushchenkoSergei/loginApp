@@ -19,22 +19,22 @@ class LoginViewController: UIViewController {
         
         settingGradientColor()
     }
-//
-//    let correctUserName = getUser.login
-//    let correctPassword = getUser.password
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let tabBarController = segue.destination as? UITabBarController else {return}
-        guard let viewControllers = tabBarController.viewControllers else {return}
+        guard let tabBarController = segue.destination as? UITabBarController
+        else {return}
+        guard let viewControllers = tabBarController.viewControllers
+        else {return}
         
         for viewController in viewControllers {
-            
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.userName = "\(getUser.person.surname) \(getUser.person.name)"
             }
-            
             else if let navigationVC = viewController as? UINavigationController {
-                let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
+                guard let aboutUserVC = navigationVC.topViewController as?
+                        AboutMeViewController else {return}
+                
                 aboutUserVC.aboutMe = getUser.person.descriptionOfYourself
                 aboutUserVC.hading = "\(getUser.person.surname) \(getUser.person.name)"
             }
@@ -42,22 +42,6 @@ class LoginViewController: UIViewController {
     }
     
     
-
-    
-    
-//    guard let tabBarController = segue.destination as? UITabBarController else {return}
-//    if let viewControllers = tabBarController.viewControllers {
-//
-//        for viewController in viewControllers {
-//            if let welcomeVC = viewController as? WelcomeViewController {
-//                welcomeVC.userName = "\(getUser.person.surname) \(getUser.person.name) "
-//        }
-//    }
-//}
-//}
-
-    
-    // MARK: - тут вопрос: (не работает скрытие клавиатуры)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -79,7 +63,10 @@ class LoginViewController: UIViewController {
     
     @IBAction func pressedButtonlogIn() {
         guard userName.text == getUser.login, password.text == getUser.password else {
-            showAlert(with: "Invalid login or password", and: "Please, enter correct login and password")
+            showAlert(with: "Invalid login or password", and: """
+                        Please, enter correct login and password
+                        """)
+            
             password.text = ""
             return
         }
@@ -101,25 +88,20 @@ extension LoginViewController {
         alert.addAction(alertAction)
     }
     
-   private func settingGradientColor() {
-        let color1 = UIColor(red: 251 / 255,
-                            green: 214 / 255,
-                            blue: 101 / 255,
-                            alpha: 1).cgColor
-        
-        let color2 = UIColor(red: 255 / 255,
+    private func settingGradientColor() {
+        let color1 = UIColor(red: 255 / 255,
                             green: 255 / 255,
                             blue: 255 / 255,
                             alpha: 1).cgColor
         
-        let color3 = UIColor(red: 255 / 255,
-                            green: 255 / 255,
-                            blue: 255 / 255,
+        let color2 = UIColor(red: 40 / 255,
+                            green: 185 / 255,
+                            blue: 235 / 255,
                             alpha: 1).cgColor
-
+        
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
-        gradientLayer.colors = [color1, color2, color3]
+        gradientLayer.colors = [color1, color2]
 
         self.view.layer.insertSublayer(gradientLayer, at: 0)
     }

@@ -157,26 +157,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fdgdfbdfbdfgdfbdfbdfbdf" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="Pph-6x-MCK">
-                                <rect key="frame" x="63" y="236" width="288" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XP-do-VPU">
+                                <rect key="frame" x="165.5" y="436" width="83" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T2l-dH-HL7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T2l-dH-HL7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8XP-do-VPU" secondAttribute="trailing" constant="16" id="9Ub-O7-DMA"/>
+                            <constraint firstItem="8XP-do-VPU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="T2l-dH-HL7" secondAttribute="leading" constant="16" id="WgL-wq-Rum"/>
+                            <constraint firstItem="8XP-do-VPU" firstAttribute="centerY" secondItem="T2l-dH-HL7" secondAttribute="centerY" id="lt8-Yb-iot"/>
+                            <constraint firstItem="8XP-do-VPU" firstAttribute="centerX" secondItem="T2l-dH-HL7" secondAttribute="centerX" id="nlv-hI-p5H"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="name" id="RgA-QL-01r"/>
                     <connections>
                         <outlet property="headingNC" destination="RgA-QL-01r" id="Oay-KY-IBR"/>
-                        <outlet property="textAboutMe" destination="Pph-6x-MCK" id="fm6-E4-AAl"/>
+                        <outlet property="textAboutMe" destination="8XP-do-VPU" id="onK-PU-fUv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Hc-ke-oxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2454.375" y="-17.95774647887324"/>
+            <point key="canvasLocation" x="2453.6231884057975" y="-18.080357142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QQT-dV-LGf">
