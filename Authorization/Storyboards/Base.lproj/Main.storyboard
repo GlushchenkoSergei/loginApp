@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wvT-AB-hku">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="wvT-AB-hku" customClass="LoginViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="78D-wb-wEa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="305" placeholderIntrinsicHeight="192" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bGV-ot-tUu">
-                                <rect key="frame" x="7.5" y="88" width="305" height="192"/>
+                                <rect key="frame" x="54.5" y="257" width="305" height="192"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="nmg-JY-9TA">
                                         <rect key="frame" x="0.0" y="0.0" width="305" height="142"/>
@@ -102,11 +102,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="myO-Rz-Qfl" customClass="WelcomeViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ad1-bZ-O1K">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="298" translatesAutoresizingMaskIntoConstraints="NO" id="TZb-YA-lrp">
-                                <rect key="frame" x="47" y="74.5" width="226" height="370.5"/>
+                                <rect key="frame" x="94" y="243.5" width="226" height="370.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, someone!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qe-So-ynF">
                                         <rect key="frame" x="0.0" y="0.0" width="226" height="31.5"/>
@@ -154,15 +154,12 @@
             <objects>
                 <viewController id="iG4-Ws-gIC" customClass="AboutMeViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IdX-it-vbf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fdgdfbdfbdfgdfbdfbdfbdf" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="Pph-6x-MCK">
-                                <rect key="frame" x="16" y="123" width="288" height="209"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fdgdfbdfbdfgdfbdfbdfbdf" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="Pph-6x-MCK">
+                                <rect key="frame" x="63" y="236" width="288" height="209"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="209" id="WPj-nb-teL"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -170,12 +167,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T2l-dH-HL7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Pph-6x-MCK" firstAttribute="leading" secondItem="T2l-dH-HL7" secondAttribute="leading" constant="16" id="ELn-50-6wl"/>
-                            <constraint firstItem="T2l-dH-HL7" firstAttribute="trailing" secondItem="Pph-6x-MCK" secondAttribute="trailing" constant="16" id="X1W-41-kEy"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="name" id="RgA-QL-01r"/>
+                    <connections>
+                        <outlet property="headingNC" destination="RgA-QL-01r" id="Oay-KY-IBR"/>
+                        <outlet property="textAboutMe" destination="Pph-6x-MCK" id="fm6-E4-AAl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Hc-ke-oxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -207,7 +204,7 @@
                     <tabBarItem key="tabBarItem" title="About me" image="book" catalog="system" id="Exg-5D-0VS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="APc-EV-FH6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
