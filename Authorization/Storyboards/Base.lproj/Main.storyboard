@@ -147,23 +147,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6vN-tZ-nhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="uWP-MN-gJ3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1639" y="-16"/>
+            <point key="canvasLocation" x="1620" y="-18"/>
         </scene>
         <!--name-->
         <scene sceneID="1Gj-n6-pfm">
             <objects>
-                <viewController id="iG4-Ws-gIC" sceneMemberID="viewController">
+                <viewController id="iG4-Ws-gIC" customClass="AboutMeViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IdX-it-vbf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fdgdfbdfbdfgdfbdfbdfbdf" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="Pph-6x-MCK">
+                                <rect key="frame" x="16" y="123" width="288" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="209" id="WPj-nb-teL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="T2l-dH-HL7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pph-6x-MCK" firstAttribute="leading" secondItem="T2l-dH-HL7" secondAttribute="leading" constant="16" id="ELn-50-6wl"/>
+                            <constraint firstItem="T2l-dH-HL7" firstAttribute="trailing" secondItem="Pph-6x-MCK" secondAttribute="trailing" constant="16" id="X1W-41-kEy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="name" id="RgA-QL-01r"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Hc-ke-oxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2456" y="-17"/>
+            <point key="canvasLocation" x="2454.375" y="-17.95774647887324"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QQT-dV-LGf">
@@ -171,6 +187,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="acq-Yh-0R1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0iI-Ls-1XW">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

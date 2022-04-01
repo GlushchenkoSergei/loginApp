@@ -12,20 +12,50 @@ class LoginViewController: UIViewController {
     @IBOutlet var userName: UITextField!
     @IBOutlet var password: UITextField!
     
-    
-    private let correctUserName = "1"
-    private let correctPassword = "1234"
+    let getUser = User.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         settingGradientColor()
     }
+//
+//    let correctUserName = getUser.login
+//    let correctPassword = getUser.password
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
-        welcomeVC.userName = userName.text
-    }
+        guard let tabBarController = segue.destination as? UITabBarController else {return}
+        guard let viewControllers = tabBarController.viewControllers else {return}
+            
+            for viewController in viewControllers {
+                
+                if let welcomeVC = viewController as? WelcomeViewController {
+                    welcomeVC.userName = "\(getUser.person.surname) \(getUser.person.name) "
+                }
+                
+                else if let navigationVC = viewController as?
+                            UINavigationController {
+    let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
+                    
+                        }
+                }
+        }
+    
+    
+
+    
+    
+//    guard let tabBarController = segue.destination as? UITabBarController else {return}
+//    if let viewControllers = tabBarController.viewControllers {
+//
+//        for viewController in viewControllers {
+//            if let welcomeVC = viewController as? WelcomeViewController {
+//                welcomeVC.userName = "\(getUser.person.surname) \(getUser.person.name) "
+//        }
+//    }
+//}
+//}
+
     
     // MARK: - тут вопрос: (не работает скрытие клавиатуры)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -34,11 +64,11 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func forgotUserName() {
-        showAlert(with: "Oops!", and: "Your name is \(correctUserName) 😉")
+        showAlert(with: "Oops!", and: "Your name is \(getUser.login) 😉")
     }
     
     @IBAction func forgotPassword() {
-        showAlert(with: "Oops!", and: "Your password \(correctPassword)")
+        showAlert(with: "Oops!", and: "Your password \(getUser.password)")
     }
     
     
@@ -48,7 +78,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func pressedButtonlogIn() {
-        guard userName.text == correctUserName, password.text == correctPassword else {
+        guard userName.text == getUser.login, password.text == getUser.password else {
             showAlert(with: "Invalid login or password", and: "Please, enter correct login and password")
             password.text = ""
             return

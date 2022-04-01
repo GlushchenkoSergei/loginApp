@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0491AB8327F70D3B0076B076 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491AB8227F70D3B0076B076 /* AboutMeViewController.swift */; };
 		04B1C6C427F22433008ED5F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C6C327F22433008ED5F7 /* AppDelegate.swift */; };
 		04B1C6C627F22433008ED5F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C6C527F22433008ED5F7 /* SceneDelegate.swift */; };
 		04B1C6CB27F22433008ED5F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B1C6C927F22433008ED5F7 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0491AB8227F70D3B0076B076 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		04B1C6C027F22433008ED5F7 /* Authorization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Authorization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B1C6C327F22433008ED5F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B1C6C527F22433008ED5F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 		04B1C6C227F22433008ED5F7 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				04B97F5D27F6363000DC18A1 /* Models */,
 				04B97F5C27F61EEB00DC18A1 /* App */,
 				04B97F5A27F61E5C00DC18A1 /* Resources */,
 				04B97F5B27F61EC400DC18A1 /* Storyboards */,
@@ -73,6 +76,7 @@
 			children = (
 				04B1C6D927F225B4008ED5F7 /* WelcomeViewController.swift */,
 				04B1C6DB27F22787008ED5F7 /* LoginViewController.swift */,
+				0491AB8227F70D3B0076B076 /* AboutMeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -90,7 +94,6 @@
 			children = (
 				04B1C6CE27F22435008ED5F7 /* LaunchScreen.storyboard */,
 				04B1C6C927F22433008ED5F7 /* Main.storyboard */,
-				04B97F5D27F6363000DC18A1 /* Models */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				04B1C6DC27F22788008ED5F7 /* LoginViewController.swift in Sources */,
 				04B97F6127F63EEE00DC18A1 /* User.swift in Sources */,
+				0491AB8327F70D3B0076B076 /* AboutMeViewController.swift in Sources */,
 				04B1C6DA27F225B4008ED5F7 /* WelcomeViewController.swift in Sources */,
 				04B1C6C427F22433008ED5F7 /* AppDelegate.swift in Sources */,
 				04B1C6C627F22433008ED5F7 /* SceneDelegate.swift in Sources */,
