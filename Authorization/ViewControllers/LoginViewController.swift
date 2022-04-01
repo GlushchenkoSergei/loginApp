@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var userName: UITextField!
     @IBOutlet var password: UITextField!
     
-    let getUser = User.getUser()
+    private let getUser = User.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +29,13 @@ class LoginViewController: UIViewController {
         
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = "\(getUser.person.surname) \(getUser.person.name)"
-            }
-            else if let navigationVC = viewController as? UINavigationController {
+                welcomeVC.userName = getUser.person.fullName
+            } else if let navigationVC = viewController as? UINavigationController {
                 guard let aboutUserVC = navigationVC.topViewController as?
                         AboutMeViewController else {return}
                 
                 aboutUserVC.aboutMe = getUser.person.descriptionOfYourself
-                aboutUserVC.hading = "\(getUser.person.surname) \(getUser.person.name)"
+                aboutUserVC.hading = getUser.person.fullName
             }
         }
     }
@@ -82,10 +81,10 @@ extension LoginViewController {
                                     message: message,
                                     preferredStyle: .alert)
         
-        present(alert, animated: true)
-        
         let alertAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(alertAction)
+       
+       present(alert, animated: true)
     }
     
     private func settingGradientColor() {
